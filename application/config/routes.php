@@ -40,6 +40,7 @@
 
 $route['default_controller'] = 'pages/view';
 $route['assets/(:any)'] = 'assets/$1';
+$route['sketchbook'] = 'pages/sketchbook';
 $route['portfolio/(:any)'] = 'pages/portfolio/$1';
 $route['(:any)'] = 'pages/view/$1';
 $route['404_override'] = '';

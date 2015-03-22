@@ -3,13 +3,21 @@
 /**
  * Pages Class
  *
- * @package	CodeIgniter
+ * @package		CodeIgniter
  * @subpackage	Application
  * @category	Controller
- * @author	B Etten
- * @link	http://example.com
+ * @author		Ben Etten
  */
 class Pages extends CI_Controller {
+
+	/**
+	 * Constructor for this controller.
+	 *
+	 */
+	public function __construct()
+	{
+		parent::__construct();
+	}
 	
 // ------------------------------------------------------------------------
 
@@ -18,7 +26,7 @@ class Pages extends CI_Controller {
 	 *
 	 * @access	public
 	 * @param	string	Name of the view being requested.
-	 * @return	type
+	 * @return	mixed	FALSE if there is a problem, else renders view.
 	 */
 	 public function view($page='home')
 	 {
@@ -52,11 +60,11 @@ class Pages extends CI_Controller {
 // ------------------------------------------------------------------------
 
 	/**
-	 * Loads the request portfolio item
+	 * Loads the requested portfolio item
 	 *
 	 * @access	public
 	 * @param	string	Name of the portfolio item being requested.
-	 * @return	type
+	 * @return	mixed	FALSE if there is a problem, else renders view.
 	 */
 	 public function portfolio($page)
 	 {
@@ -72,10 +80,34 @@ class Pages extends CI_Controller {
 		// Build title based on requested page.
 		$data['title'] = clean_title($page);
 
-
+		// Now build up the page by loading the appropriate views.
 		$this->load->view('templates/header', $data);
 		$this->load->view('templates/menu');
 		$this->load->view('portfolio/'.$page, $data);
+		$this->load->view('templates/footer');  
+	 }
+	 
+// ------------------------------------------------------------------------
+
+	/**
+	 * Loads the requested portfolio item
+	 *
+	 * @access	public
+	 * @param	string	Name of the portfolio item being requested.
+	 * @return	mixed	FALSE if there is a problem, else renders view.
+	 */
+	 public function sketchbook()
+	 {
+		// Use the get_user_feed method to retrieve my sketches.
+		$data['sketchbook'] = $this->instagram->get_user_feed();
+				
+		// Build title based on requested page.
+		$data['title'] = clean_title('sketchbook');
+
+		// Now build up the page by loading the appropriate views.
+		$this->load->view('templates/header', $data);
+		$this->load->view('templates/menu');
+		$this->load->view('pages/sketchbook', $data);
 		$this->load->view('templates/footer');  
 	 }
 	 
