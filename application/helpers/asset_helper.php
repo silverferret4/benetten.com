@@ -89,6 +89,23 @@ if ( ! function_exists('pdfs_url'))
 	}
 } 
 
+// ------------------------------------------------------------------------
+
+/**
+ * Returns a full path to blog image.
+ *
+ * @access	public
+ * @param	string	Name of the image.
+ * @return	url		Url to the css folder.
+ */
+if ( ! function_exists('blog_url'))
+{
+	function blog_url($image_name)
+	{
+		return base_url().'assets/images/'.$image_name.'/blog_full.jpg';
+	}
+} 
+
 
 /* End of file asset_helper.php */
 /* Location: ./application/helpers/asset_helper.php */
