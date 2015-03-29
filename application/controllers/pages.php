@@ -28,7 +28,7 @@ class Pages extends CI_Controller {
 	 * @param	string	Name of the view being requested.
 	 * @return	mixed	FALSE if there is a problem, else renders view.
 	 */
-	 public function view($page='home')
+	 public function view($page='portfolio')
 	 {
 		if ( ! file_exists(APPPATH.'/views/pages/'.$page.'.php'))
 		{
@@ -43,18 +43,12 @@ class Pages extends CI_Controller {
 		$data['title'] = clean_title($page);
 
 
-		// Home should not have header, menu or footer.
-		// So use a little conditional logic to control that.
-		if ($page<>'home')
-		{
-			$this->load->view('templates/header', $data);
-			$this->load->view('templates/menu');
-		}
+		// Load up individual templates in order to put together complete page.
+		$this->load->view('templates/header', $data);
+		$this->load->view('templates/menu');
 		$this->load->view('pages/'.$page, $data);
-		if ($page<>'home')
-		{
-			$this->load->view('templates/footer');
-		}   
+		$this->load->view('templates/footer');
+		
 	 }
 
 // ------------------------------------------------------------------------

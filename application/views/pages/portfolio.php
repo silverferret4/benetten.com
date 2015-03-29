@@ -1,11 +1,7 @@
-PORTFOLIO
-
-<div id="raymond_ave" class="portfolio_item">
-	<a href="<?php echo base_url(); ?>portfolio/raymond_ave">Raymond Avenue</a>	
-</div>
-
 <div id="mill_city_ruins" class="portfolio_item">
-	<a href="<?php echo base_url(); ?>portfolio/mill_city_ruins">Mill City Ruins</a>	
+	<a href="<?php echo base_url(); ?>portfolio/mill_city_ruins">
+		<img src="<?php echo blog_url('mill_city_ruins'); ?>" alt="Mill City Ruins">
+	</a>	
 </div>
 
 <div id="alcatraz" class="portfolio_item">
