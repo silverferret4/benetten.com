@@ -28,8 +28,14 @@ class Instagram {
 		
 		// Load the Instagram configuration information.
 		$this->CI->load->config('instagram');
+		
+		// Test to make sure that curl is installed.
+		if (!in_array('curl', get_loaded_extensions()))
+		{
+			log_message('error', 'curl is not installed.  The Instagram library will not work.');
+		}
 	}
-	
+
 // ------------------------------------------------------------------------
 
 	/**
@@ -44,10 +50,10 @@ class Instagram {
 	{
 		// Log message.
 		log_message('debug','call_api');
-		
+				
 		// Initiate handle to cURL session.
 		$ch = curl_init();
-		
+				
 		// Set the URL of the API being called.
 		curl_setopt($ch, CURLOPT_URL, $url);
 		
@@ -61,7 +67,7 @@ class Instagram {
 		curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
 		
 		// Setup to debug cURL call.  This should be taken out if not using!!!
-		//$fp = fopen(APPPATH.'/logs/errorlog.txt', 'w'); 
+		//$fp = fopen(APPPATH.'/logs/instagram_curl_log.txt', 'w'); 
 		//curl_setopt($ch, CURLOPT_VERBOSE, 1);
 		//curl_setopt($ch, CURLOPT_STDERR, $fp);
 		
