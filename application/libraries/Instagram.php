@@ -42,6 +42,9 @@ class Instagram {
 	 */
 	public function call_api($url, $post_parameters = FALSE)
 	{
+		// Log message.
+		log_message('debug','call_api');
+		
 		// Initiate handle to cURL session.
 		$ch = curl_init();
 		
@@ -72,7 +75,7 @@ class Instagram {
 		// Close the cURL session.
 		curl_close($ch);
 		
-		// Log response.  Need to take out before production.
+		// Log message... the response from Instagram.
 		log_message('debug',$contents);
 		
 		// Return the response.
@@ -90,6 +93,9 @@ class Instagram {
 	 */
 	public function get_popular_media()
 	{
+		// Log message.
+		log_message('debug','get_popular');
+		
         // Build URL for retrieving popular media.
         $url = sprintf(
         	$this->CI->config->item('instagram_popular_media_url'),
@@ -112,6 +118,9 @@ class Instagram {
 	 */
 	public function get_user_feed()
 	{
+		// Log message.
+		log_message('debug','get_user_feed');
+		
 		// Build URL for retrieving user feed.
 		$url = sprintf(
 			$this->CI->config->item('instagram_user_feed_url'),
