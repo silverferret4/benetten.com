@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<title>Ben Etten - <?php echo $title ?></title>
-		<link rel="stylesheet" type="text/css" href="<?php echo styles_url(); ?>styles.css">
+		<link rel="stylesheet" type="text/css" href="<?php echo styles_url(); ?>/styles.css">
 		<!-- Latest compiled and minified CSS -->
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
 		<!-- Optional theme -->
