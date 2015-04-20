@@ -1,0 +1,238 @@
+/*
+ * SMACSS + SCSS starter v2.0
+ * Inspired by SMACSS http://smacss.com
+ * Author: @jonathanpath
+ * Date: 11 July 2013
+ *
+ * https://github.com/jonathanpath/SASS-SMACSS
+ * See file structure in http://jonathanpath.com/sass+smacss/scss/style.scss
+ * Sass Structure inspired by : https://github.com/sutter/POPY-starter-HTML-SCSS
+ *
+ * Coding rules : https://github.com/necolas/idiomatic-css
+ *
+ */
+/* Compass */
+/* Tools */
+/* ===========================
+   Tools/Helpers
+   =========================== */
+/*
+ * Image replacement
+ */
+/* line 9, ../scss/tools/_helpers.scss */
+.ir {
+  background-color: transparent;
+  border: 0;
+  overflow: hidden;
+  /* IE 6/7 fallback */
+  *text-indent: -9999px; }
+
+/* line 17, ../scss/tools/_helpers.scss */
+.ir:before {
+  content: "";
+  display: block;
+  width: 0;
+  height: 150%; }
+
+/*
+ * Hide from both screenreaders and browsers: h5bp.com/u
+ */
+/* line 28, ../scss/tools/_helpers.scss */
+.hidden {
+  display: none !important;
+  visibility: hidden; }
+
+/*
+ * Hide only visually, but have it available for screenreaders: h5bp.com/v
+ */
+/* line 37, ../scss/tools/_helpers.scss */
+.visuallyhidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px; }
+
+/*
+ * Extends the .visuallyhidden class to allow the element to be focusable
+ * when navigated to via the keyboard: h5bp.com/p
+ */
+/* line 53, ../scss/tools/_helpers.scss */
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  width: auto; }
+
+/*
+ * Hide visually and from screenreaders, but maintain layout
+ */
+/* line 67, ../scss/tools/_helpers.scss */
+.invisible {
+  visibility: hidden; }
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+/* line 83, ../scss/tools/_helpers.scss */
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  /* 1 */
+  display: table;
+  /* 2 */ }
+
+/* line 89, ../scss/tools/_helpers.scss */
+.clearfix:after {
+  clear: both; }
+
+/*
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+/* line 98, ../scss/tools/_helpers.scss */
+.clearfix {
+  *zoom: 1; }
+
+/* =Layout
+------------------- */
+/* line 106, ../scss/tools/_helpers.scss */
+.ul-list-inline {
+  list-style: none;
+  margin: 0;
+  padding: 0; }
+  /* line 227, ../scss/tools/_mixins.scss */
+  .ul-list-inline li {
+    display: inline-block;
+    vertical-align: middle; }
+    /* line 17, ../scss/tools/_mixins.scss */
+    .lt-ie8 .ul-list-inline li {
+      display: inline;
+      zoom: 1; }
+
+/* =Fonts
+------------------- */
+/* Chart Colors */
+/* line 114, ../scss/tools/_helpers.scss */
+.f-color1 {
+  color: #df2e30; }
+
+/* line 117, ../scss/tools/_helpers.scss */
+.f-color2 {
+  color: #1894c4; }
+
+/* =Wordpress alignment
+-------------------*/
+/* line 125, ../scss/tools/_helpers.scss */
+.alignleft {
+  display: inline;
+  float: left; }
+
+/* line 129, ../scss/tools/_helpers.scss */
+.alignright {
+  display: inline;
+  float: right; }
+
+/* line 133, ../scss/tools/_helpers.scss */
+.aligncenter {
+  clear: both;
+  display: block;
+  margin-left: auto;
+  margin-right: auto; }
+
+/* line 139, ../scss/tools/_helpers.scss */
+.txtleft {
+  text-align: left; }
+
+/* line 142, ../scss/tools/_helpers.scss */
+.txtright {
+  text-align: right; }
+
+/* Base */
+/* ===========================
+   Base
+   =========================== */
+/* line 5, ../scss/base/_base.scss */
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 300;
+  font-size: 1em;
+  line-height: 1.5; }
+
+/* line 12, ../scss/base/_base.scss */
+a {
+  color: #df2e30;
+  text-decoration: none;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out; }
+  /* line 17, ../scss/base/_base.scss */
+  a:hover {
+    color: #bd1d1f; }
+
+/* line 22, ../scss/base/_base.scss */
+::-moz-selection {
+  background: #df2e30;
+  color: #fff;
+  text-shadow: none; }
+
+/* line 27, ../scss/base/_base.scss */
+::selection {
+  background: #df2e30;
+  color: #fff;
+  text-shadow: none; }
+
+/* line 33, ../scss/base/_base.scss */
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0; }
+
+/* Fonts */
+/* Layout */
+/* ==|====================
+   Layout/Header
+   ======================= */
+/* ==|====================
+   Layout/Nav
+   ======================= */
+/* line 1, ../scss/layout/_sketchbook.scss */
+.sketch {
+  padding: 1em; }
+  /* line 3, ../scss/layout/_sketchbook.scss */
+  .sketch img {
+    width: 100%;
+    height: auto; }
+
+/* ==|====================
+   Layout/Footer
+   ======================= */
+/* ==|====================
+   Layout/Constrained
+   ======================= */
+/* line 5, ../scss/layout/_constrained.scss */
+.l-constrained {
+  max-width: 71.25em;
+  padding: 0 1.25em;
+  margin: 0 auto; }
+
+/* Modules */

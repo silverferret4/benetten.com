@@ -18,7 +18,7 @@ class Pages extends CI_Controller {
 	{
 		parent::__construct();
 	}
-	
+
 // ------------------------------------------------------------------------
 
 	/**
@@ -34,7 +34,7 @@ class Pages extends CI_Controller {
 		{
 			// Requested page does not exist... show 404.
 			show_404();
-			
+
 			// Return FALSE if there as a problem.
 			return FALSE;
 		}
@@ -44,11 +44,11 @@ class Pages extends CI_Controller {
 
 
 		// Load up individual templates in order to put together complete page.
-		$this->load->view('templates/header', $data);
+		$this->load->view('templates/head', $data);
 		$this->load->view('templates/menu');
 		$this->load->view('pages/'.$page, $data);
 		$this->load->view('templates/footer');
-		
+
 	 }
 
 // ------------------------------------------------------------------------
@@ -66,7 +66,7 @@ class Pages extends CI_Controller {
 		{
 			// Requested page does not exist... show 404.
 			show_404();
-			
+
 			// Return FALSE if there was a problem.
 			return FALSE;
 		}
@@ -75,12 +75,12 @@ class Pages extends CI_Controller {
 		$data['title'] = clean_title($page);
 
 		// Now build up the page by loading the appropriate views.
-		$this->load->view('templates/header', $data);
+		$this->load->view('templates/head', $data);
 		$this->load->view('templates/menu');
 		$this->load->view('portfolio/'.$page, $data);
-		$this->load->view('templates/footer');  
+		$this->load->view('templates/footer');
 	 }
-	 
+
 // ------------------------------------------------------------------------
 
 	/**
@@ -94,17 +94,17 @@ class Pages extends CI_Controller {
 	 {
 		// Use the get_user_feed method to retrieve my sketches.
 		$data['sketchbook'] = $this->instagram->get_user_feed();
-				
+
 		// Build title based on requested page.
 		$data['title'] = clean_title('sketchbook');
 
 		// Now build up the page by loading the appropriate views.
-		$this->load->view('templates/header', $data);
+		$this->load->view('templates/head', $data);
 		$this->load->view('templates/menu');
 		$this->load->view('pages/sketchbook', $data);
-		$this->load->view('templates/footer');  
+		$this->load->view('templates/footer');
 	 }
-	 
+
 }
 
 /* End of file pages.php */

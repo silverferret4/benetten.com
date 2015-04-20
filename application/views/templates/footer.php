@@ -1,6 +1,6 @@
-			<div id="footer">
-				&copy; 2015. All Rights Reserved.
-			</div>
+			<footer>
+				&copy; <?php echo date("Y"); ?>. All Rights Reserved.
+			</footer>
 		</div>
 	</body>
 </html>
