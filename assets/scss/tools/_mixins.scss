@@ -296,3 +296,17 @@ $prefix-for-spec:      true !default;
   #{$property}: -webkit-calc(#{$expression});
   #{$property}: calc(#{$expression});
 }
+
+// = Responsive Breakpoints
+// -----------------------------
+@mixin breakpoint($point) {
+	@if $point == desktop {
+		@media (min-width: 75em) { @content ; }
+	}
+	@else if $point == laptop {
+		@media (max-width: 48em) { @content ; }
+	}
+		@else if $point == phone {
+		@media (max-width: 30em) { @content ; }
+	}
+}

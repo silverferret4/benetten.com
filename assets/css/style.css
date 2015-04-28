@@ -6,37 +6,35 @@
    =========================== */
 /* line 5, ../scss/base/_base.scss */
 body {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Raleway", sans-serif;
   font-weight: 300;
   font-size: 1em;
   line-height: 1.5; }
 
 /* line 12, ../scss/base/_base.scss */
 a {
-  color: #df2e30;
+  font-size: 1.5em;
+  color: #111111;
   text-decoration: none;
   -webkit-transition: all 0.3s ease-in-out;
   -moz-transition: all 0.3s ease-in-out;
   -ms-transition: all 0.3s ease-in-out;
   -o-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out; }
-  /* line 17, ../scss/base/_base.scss */
-  a:hover {
-    color: #bd1d1f; }
 
-/* line 22, ../scss/base/_base.scss */
+/* line 23, ../scss/base/_base.scss */
 ::-moz-selection {
   background: #df2e30;
   color: #fff;
   text-shadow: none; }
 
-/* line 27, ../scss/base/_base.scss */
+/* line 28, ../scss/base/_base.scss */
 ::selection {
   background: #df2e30;
   color: #fff;
   text-shadow: none; }
 
-/* line 33, ../scss/base/_base.scss */
+/* line 34, ../scss/base/_base.scss */
 hr {
   display: block;
   height: 1px;
@@ -73,4 +71,8 @@ hr {
 /* ==|====================
    Layout/Footer
    ======================= */
+/* line 5, ../scss/layout/_footer.scss */
+footer {
+  font-size: 1.5em; }
+
 /* Modules */
