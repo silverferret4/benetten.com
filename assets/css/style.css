@@ -1,18 +1,17 @@
-/* Compass */
 /* Tools */
 /* Base */
 /* ===========================
    Base
    =========================== */
 /* line 5, ../scss/base/_base.scss */
-body {
-  font-family: "Raleway", sans-serif;
+html, body {
+  font-family: "Lato", sans-serif;
   font-weight: 300;
   font-size: 1em;
   line-height: 1.5; }
 
 /* line 12, ../scss/base/_base.scss */
-a {
+a, .nav li a {
   font-size: 1.5em;
   color: #111111;
   text-decoration: none;
@@ -21,20 +20,24 @@ a {
   -ms-transition: all 0.3s ease-in-out;
   -o-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out; }
+  /* line 18, ../scss/base/_base.scss */
+  a:hover, .nav li a:hover {
+    background: none;
+    color: #444444; }
 
-/* line 23, ../scss/base/_base.scss */
+/* line 24, ../scss/base/_base.scss */
 ::-moz-selection {
   background: #df2e30;
   color: #fff;
   text-shadow: none; }
 
-/* line 28, ../scss/base/_base.scss */
+/* line 29, ../scss/base/_base.scss */
 ::selection {
   background: #df2e30;
   color: #fff;
   text-shadow: none; }
 
-/* line 34, ../scss/base/_base.scss */
+/* line 35, ../scss/base/_base.scss */
 hr {
   display: block;
   height: 1px;
@@ -48,11 +51,26 @@ hr {
 /* ==|====================
    Layout/Main
    ======================= */
-/* line 8, ../scss/layout/_main.scss */
+/* line 5, ../scss/layout/_main.scss */
 .wrapper {
   width: 100%;
-  padding: 0;
-  margin: 0; }
+  max-width: 1366px;
+  padding: 0 1%;
+  margin: 0 auto; }
+  @media (max-width: 768px) {
+    /* line 5, ../scss/layout/_main.scss */
+    .wrapper {
+      padding: 0 2.5%; } }
+  @media (max-width: 480px) {
+    /* line 5, ../scss/layout/_main.scss */
+    .wrapper {
+      padding: 0 5%; } }
+
+/* line 18, ../scss/layout/_main.scss */
+.container {
+  width: 100%;
+  margin: 0;
+  padding: 0; }
 
 /* ==|====================
    Layout/Header
@@ -60,13 +78,23 @@ hr {
 /* ==|====================
    Layout/Nav
    ======================= */
+/* line 5, ../scss/layout/_nav.scss */
+.navbar-collapse {
+  padding: 0; }
+
 /* line 1, ../scss/layout/_sketchbook.scss */
 .sketch {
-  padding: 1em; }
-  /* line 3, ../scss/layout/_sketchbook.scss */
+  padding: 1em 0; }
+  @media (max-width: 480px) {
+    /* line 1, ../scss/layout/_sketchbook.scss */
+    .sketch {
+      width: 50%; } }
+  /* line 6, ../scss/layout/_sketchbook.scss */
   .sketch img {
-    width: 100%;
-    height: auto; }
+    display: block;
+    width: 150px;
+    height: auto;
+    margin: 0 auto; }
 
 /* ==|====================
    Layout/Footer

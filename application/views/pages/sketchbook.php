@@ -1,8 +1,8 @@
 <h2>SKETCHBOOK</h2>
-	<div class="wrapper clearfix">
+	<div class="container clearfix">
 		<?php foreach($sketchbook->data as $sketch) { ?>
 
-			<div class="sketch col-lg-2 col-md-3 col-sm-6">
+			<div class="sketch col-md-2 col-sm-3 col-xs-4">
 				<img src="<?php echo $sketch->images->thumbnail->url; ?>"
 					alt="<?php echo $sketch->caption->text; ?>">
 			</div>

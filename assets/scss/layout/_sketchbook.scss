@@ -1,7 +1,12 @@
 .sketch {
-  padding: 1em;
+  padding: 1em 0;
+  @include breakpoint(small) {
+    width: 50%;
+  }
   img {
-    width: 100%;
+    display: block;
+    width: 150px;
     height: auto;
+    margin: 0 auto;
   }
 }

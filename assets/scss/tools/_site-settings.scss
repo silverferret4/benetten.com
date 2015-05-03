@@ -8,13 +8,21 @@
 $audio-canvas-video: false; // True | False
 
 // Fonts
-$font1: 'Raleway', sans-serif;
+$font1: 'Lato', sans-serif;
+
+// Type scale reference: http://www.modularscale.com/?1&em&1.5&web&text
+$extra-large: 3.375em;
+$large: 2.25em;
+$medium: 1.5em;
+$base: 1em;
+$small: 0.667em;
 
 // = Colors
 // -----------------------------
 
 // Graphic chart
-$dark-gray: #111111;
+$gray-1: #111111;
+$gray-2: #444444;
 $red: #df2e30;
 $blue: #1894c4;
 $facebook: #3b5998;
@@ -56,3 +64,8 @@ $prefix-for-mozilla:   true !default;
 $prefix-for-microsoft: true !default;
 $prefix-for-opera:     true !default;
 $prefix-for-spec:      true !default; // required for keyframe mixin
+
+// = Responsive sizes
+$width-large: 1366px;
+$width-medium: 768px;
+$width-small: 480px;

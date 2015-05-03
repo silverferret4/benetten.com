@@ -2,11 +2,21 @@
    Layout/Main
    ======================= */
 
-.l-main {
-}
-
 .wrapper {
   width: 100%;
-  padding: 0;
+  max-width: $width-large;
+  padding: 0 1%;
+  margin: 0 auto;
+  @include breakpoint(medium) {
+    padding: 0 2.5%;
+  }
+  @include breakpoint(small) {
+    padding: 0 5%;
+  }
+}
+
+.container {
+  width: 100%;
   margin: 0;
+  padding: 0;
 }

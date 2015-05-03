@@ -2,21 +2,22 @@
    Base
    =========================== */
 
-body {
+html, body {
     font-family: $font1;
     font-weight: 300;
     font-size: 1em;
     line-height: 1.5;
 }
 
-a {
-  font-size: 1.5em;
-  color: $dark-gray;
+a, .nav li a {
+  font-size: $medium;
+  color: $gray-1;
   text-decoration: none;
   @include transition();
 
   &:hover {
-      //color: $color-link-hover;
+    background: none;
+    color: $gray-2;
   }
 }
 
